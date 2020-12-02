@@ -8,7 +8,7 @@ just upload the document in jpg or png format and extract the details
 
 ### 1. Install Python 3+ and Anaconda 
 
-If you don't already have Python 3+ installed And Anaconda, grab it from <https://www.anaconda.com/products/individual>. You'll want to download install the version of **Python 3.6**. because latest version is not compatible with library
+If you don't already have Python 3+ installed And Anaconda, grab it from <https://www.anaconda.com/products/individual>. You'll will need to download and install the version of **Python 3.6**. because latest version is not compatible with library
 
 ### 2. Download Tesseract
 
