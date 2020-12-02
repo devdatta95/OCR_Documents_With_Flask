@@ -20,8 +20,12 @@ Open this exe file. If it windows asks you “Do you want to allow this software
 
 ### 3. Clone This Repository
 
-On, click the green "Clone or Download" button at the top right of the page. If you want to get started with this script more quickly, click the "Download ZIP" button, and extract the ZIP somewhere on your computer.
+<https://github.com/devdatta95/OCR_Documents_With_Flask> On, click the green "Clone or Download" button at the top right of the page. If you want to get started with this script more quickly, click the "Download ZIP" button, and extract the ZIP somewhere on your computer.
 
+you can clone using this command:
+```shell
+git clone 
+```
 
 ### 4. Create Conda Environment
 
