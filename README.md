@@ -24,7 +24,8 @@ Open this exe file. If it windows asks you “Do you want to allow this software
 
 you can clone using this command:
 ```shell
-git clone 
+git clone https://github.com/devdatta95/OCR_Documents_With_Flask
+cd OCR_Document_With_Flask
 ```
 
 ### 4. Create Conda Environment
