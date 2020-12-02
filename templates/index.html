@@ -1,0 +1,93 @@
+  
+<!--
+@author: devdatta supnekar
+@topic: ocr documents
+@created_on: 29/11/2020
+@last_updated:
+@updated_by
+-->
+  
+  <!-----------------------------  BASE SECTION  ----------------------------------->
+
+{% extends "base.html"%}
+
+  <!-------------------------------------------------------------------------------->
+
+{% block content %}
+
+
+  <!---------------------------  HOME BODY SECTION   ------------------------------>
+
+<div>
+
+        <div class="w3-content w3-pale-red" id=form1 style="max-width:800px">
+        <center>
+        <h2>Image Uploads</h2>
+        </center>
+            <br>
+            <hr>
+
+
+
+            <form id="upload-image" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+
+            <input id="image-picker" type="file" name="photo" accept="image/*">
+
+                <label for="dtype">Document Type :</label>
+                <select name="type" id="dtype">
+                    <option value="Aadhar_Card">Aadhar Card</option>
+                    <option value="Bank_Cheque">Bank Cheque</option>
+                    <option value="Driving_Licence">Driving Licence</option>
+                    <option value="Pancard">Pancard</option>
+                    <option value="Others">Others</option>
+                </select>
+                <br>
+                <hr>
+                <div id="bt1">
+            <input type="submit" value="Upload!" id="upload-button">
+                </div>
+            </form>
+
+        </div>
+
+</div>
+
+
+<!----------------------------- SCRIPT SECTION ------------------------------------->
+
+<script>
+
+    $("#upload-image").change(function(){
+
+        var img_input = document.getElementById('upload-image');
+
+        for (var i=0; i<input.files.length; i++)
+        {
+        //koala.jpg, koala.JPG substring(index) lastIndexOf('a') koala.1.jpg
+            var ext= img_input.files[i].name.substring(img_input.files[i].name.lastIndexOf('.')+1).toLowerCase()
+
+            if ((ext == 'jpg') || (ext == 'png'))
+            {
+                $("#bt1").text("Files are supported")
+            }
+            else
+            {
+                $("#bt1").text("Files are NOT supported")
+                document.getElementById("upload-image").value ="";
+            }
+
+        }
+
+
+    } );
+
+
+
+</script>
+
+
+<!----------------------------------------------------------------------------->
+
+{% endblock %}
+
+  <!-----------------------------  THE END  ----------------------------------->

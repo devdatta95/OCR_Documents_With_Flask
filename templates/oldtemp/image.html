@@ -1,0 +1,43 @@
+<html>
+<head>
+    <title>Image Output</title>
+  </head>
+<style>
+
+input[type=button] {
+  width: 10%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+</style>
+    <body style="background-color:powderblue;">
+
+    	<center>
+
+    	<h1>Image Output</h1>
+
+      
+        <img src="{{ url_for('display_image') }}" alt="output" style="width:500px;height:600px;">
+
+        <br>
+        <br>
+        <a href="/"><input type="button" value="Home"></a>
+
+        </center>
+
+        <h1>Extracted Details: </h1>
+            <hr>
+                <h4>{{details}}</h4>
+            <hr>
+    </body>
+
+
+
+</html>

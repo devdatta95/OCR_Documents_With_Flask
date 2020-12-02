@@ -1,0 +1,62 @@
+  
+
+<!--
+@author: devdatta supnekar
+@topic: ocr documents
+@created_on: 29/11/2020
+@last_updated:
+@updated_by
+-->
+
+ <!----------------------------- BASE SECTION  ----------------------------------->
+
+{% extends "base.html"%}
+
+  <!------------------------------------------------------------------------------->
+
+{% block content %}
+
+
+  <!-------------------------- THANKYOU BODY SECTION ------------------------------->
+
+
+<div>
+  <div>
+    		<center>
+
+    	<h1>Image Output</h1>
+
+
+        <img src="{{ url_for('display_image') }}" alt="output" style="width:800px;height:600px;">
+
+        <br>
+        <br>
+          <a href="/"><input type="button" value="Home"></a>
+
+      </center>
+  </div>
+
+<div class="w3-container w3-pale-green">
+        <h1>Extracted Details: </h1>
+
+
+
+           <table class="table table-dark table-hover">
+
+            {% for key, val in details.items() %}
+            <tr>
+                <td>{{key}}</td>
+                <td>{{val}}</td>
+            </tr>
+            {% endfor %}
+
+               </table>
+
+
+  </div>
+
+</div>
+
+  {% endblock %}
+
+    <!---------------------------------  THE END  ----------------------------------------->
